@@ -23,3 +23,10 @@ Laravelを用いてTodo管理アプリを作成しました。
 ## 今後の改善
 - 編集機能
 - 並び替え機能
+## 画面
+
+### 一覧画面
+![一覧](./screenshots/index.png)
+
+### ゴミ箱画面
+![ゴミ箱](./screenshots/trash.png)
