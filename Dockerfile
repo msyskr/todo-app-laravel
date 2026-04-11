@@ -2,8 +2,8 @@ FROM php:8.2-cli
 
 WORKDIR /var/www/html
 
-# Nodeをちゃんと入れる（ここ重要）
 RUN apt-get update && apt-get install -y \
+    bash \
     curl \
     git \
     unzip \
@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     && docker-php-ext-install pdo pdo_mysql pdo_pgsql zip
 
-# Node 18以上を入れる（超重要）
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get update \
     && apt-get install -y nodejs
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
@@ -23,10 +23,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
-
-# build前に削除（これも大事）
-RUN rm -rf public/build
-
+RUN rm -rf node_modules public/build
 RUN npm install
 RUN npm run build
 
