@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todoリスト</title>
-    <link rel="stylesheet" href="https://todo-app-laravel-1-0eo2.onrender.com/build/assets/app-DvAD4qSo.css?v=1">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-100">
 
