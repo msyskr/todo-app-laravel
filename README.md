@@ -1,7 +1,7 @@
 # Todoアプリ（Laravel）
 
 ## URL
-https://todo-app-laravel-3.onrender.com
+https://todo-app-laravel-3.onrender.com/tasks
 
 ## 概要
 Laravelを用いてTodo管理アプリを作成しました。
