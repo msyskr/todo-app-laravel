@@ -1,5 +1,8 @@
 # Todoアプリ（Laravel）
 
+## URL
+https://todo-app-laravel-3.onrender.com
+
 ## 概要
 Laravelを用いてTodo管理アプリを作成しました。
 
@@ -14,11 +17,14 @@ Laravelを用いてTodo管理アプリを作成しました。
 ## 使用技術
 - Laravel
 - Tailwind CSS
-- MySQL
+- PostgreSQL
+- Docker
+- Render（デプロイ済み）
 
 ## 工夫した点
 - ゴミ箱機能を実装し、削除と復元を両立
 - TailwindでシンプルなUI構築
+- Renderを用いた本番デプロイ
 
 ## 今後の改善
 - 編集機能
